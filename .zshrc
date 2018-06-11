@@ -77,6 +77,8 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias vimconfig="vim ~/.vimrc"
 alias please='sudo $(fc -ln -1)'
 
+PS1='\[\033[01;31m\][\A] \[\033[01;32m\]\u@\h\[\033[34m\] \w \$\[\033[00m\] '
+
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 
