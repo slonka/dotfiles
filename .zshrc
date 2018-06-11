@@ -77,7 +77,8 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias vimconfig="vim ~/.vimrc"
 alias please='sudo $(fc -ln -1)'
 
-PS1='\[\033[01;31m\][\A] \[\033[01;32m\]\u@\h\[\033[34m\] \w \$\[\033[00m\] '
+PROPMPT='%{^[[1m^[[34m%}#%{^[[00m%} %(#,%{^[[43m%}%{^[[30m%}%n%{^[[00m%},%{^[[36m%}%n) %{^[[37m%}@ %{^[[32m%}%m %{^[[37m%}in %{^[[1m^[[33m%}%~%{^[[00m%}$(ys_hg_prompt_info)$(git_prompt_info) %{^[[37m%}[%*] %(?,,C:%{^[[31m%}%?%{^[[00m%})
+%{^[[1m^[[31m%}$ %{^[[00m%}'
 
 bindkey -v
 bindkey '^R' history-incremental-search-backward
