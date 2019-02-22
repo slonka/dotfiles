@@ -7,4 +7,6 @@ ln -sv ~/projects/dotfiles/.oh-my.zsh ~
 ln -sv ~/projects/dotfiles/.tmux.conf ~
 ln -sv ~/projects/dotfiles/.bashrc ~
 ln -sv ~/projects/dotfiles/.zsh/ ~
+ln -sv ~/projects/dotfiles/.sshrc ~
+ln -sv ~/projects/dotfiles/.sshrc.d ~
 ```
