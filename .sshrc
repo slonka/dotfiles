@@ -14,3 +14,5 @@ source "$SSHHOME/.sshrc.d/fztricks.bash"
 bind -f $SSHHOME/.sshrc.d/.inputrc
 
 bind -m vi-insert "\C-l":clear-screen
+
+alias vim="vim -u $SSHHOME/.sshrc.d/.vimrc"
