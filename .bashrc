@@ -5,6 +5,6 @@ do
   . $file
 done
 
-export PS1="\[\e[94m\]# \[\e[m\]\[\e[36m\]\u\[\e[m\]\[\e[37m\] @ \[\e[m\]\[\e[32m\]\h\[\e[m\] in \[\e[93m\]\w\[\e[m\]\[\e[36m\]\`parse_git_branch\` \[\e[m\][\t]\n\e[91m$ \e[39m"
+export PS1="${LIGHT_BLUE}# ${CYAN}\u${RESET} @ ${GREEN}\`hostname -f\`${RESET} in ${BOLD}${LIGHT_YELLOW}\w\`parse_git_branch\`${RESET} [\t]\n${LIGHT_RED}\\$ ${RESET}"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

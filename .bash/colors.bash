@@ -1,0 +1,1 @@
+source ~/.sshrc.d/colors.bash
