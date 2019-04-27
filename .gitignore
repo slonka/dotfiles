@@ -1,5 +1,6 @@
 # secrets
 .zsh/secrets.zsh
+.zsh/secrets
 
 # PATH setup
 .extra

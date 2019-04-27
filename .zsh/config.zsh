@@ -30,3 +30,5 @@ export ASYNC_PROFILER_DIR=$HOME/src/async-profiler
 export FLAME_GRAPH_DIR=$HOME/src/FlameGraph
 
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
+
+export LANG="pl_PL.UTF-8"
