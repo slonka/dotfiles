@@ -1,11 +1,14 @@
 
 # get current branch in git repo
 function parse_git_branch() {
+    # double escapes do not work in echo
+    local CYAN_ECHO="\033[0;36m"
+
     BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
     if [ ! "${BRANCH}" == "" ]
     then
         STAT=`parse_git_dirty`
-        echo " git:${BRANCH}${STAT}"
+        echo -e " on git:${CYAN_ECHO}${BRANCH}${STAT}"
     else
         echo ""
     fi
