@@ -1,3 +1,5 @@
+export PATH="/usr/local/bin:$PATH"
+
 # files to source in priority
 source ~/.oh-my.zsh
 
@@ -8,6 +10,6 @@ do
   source $file
 done
 
-eval "$(direnv hook zsh)"
+#eval "$(direnv hook zsh)"
 export NVS_HOME="$HOME/.nvs"
 [ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
