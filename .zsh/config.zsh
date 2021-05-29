@@ -32,3 +32,8 @@ export FLAME_GRAPH_DIR=$HOME/src/FlameGraph
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 export LANG="pl_PL.UTF-8"
+
+
+export HISTSIZE=1000000000
+export SAVEHIST=$HISTSIZE
+setopt EXTENDED_HISTORY

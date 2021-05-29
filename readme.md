@@ -2,13 +2,13 @@
 
 ```
 git clone https://github.com/slonka/dotfiles.git ~/projects/dotfiles
-ln -sv ~/projects/dotfiles/.zsh/ ~
-ln -sv ~/projects/dotfiles/.zshrc ~
-ln -sv ~/projects/dotfiles/.oh-my.zsh ~
-ln -sv ~/projects/dotfiles/.tmux.conf ~
-ln -sv ~/projects/dotfiles/.bashrc ~
-ln -sv ~/projects/dotfiles/.bash ~
-ln -sv ~/projects/dotfiles/.sshrc ~
-ln -sv ~/projects/dotfiles/.sshrc.d ~
+ln -svf ~/projects/dotfiles/.zsh/ ~
+ln -svf ~/projects/dotfiles/.zshrc ~
+ln -svf ~/projects/dotfiles/.oh-my.zsh ~
+ln -svf ~/projects/dotfiles/.tmux.conf ~
+ln -svf ~/projects/dotfiles/.bashrc ~
+ln -svf ~/projects/dotfiles/.bash ~
+ln -svf ~/projects/dotfiles/.sshrc ~
+ln -svf ~/projects/dotfiles/.sshrc.d ~
 
 ```
