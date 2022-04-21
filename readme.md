@@ -10,5 +10,6 @@ ln -svf ~/projects/dotfiles/.bashrc ~
 ln -svf ~/projects/dotfiles/.bash ~
 ln -svf ~/projects/dotfiles/.sshrc ~
 ln -svf ~/projects/dotfiles/.sshrc.d ~
+ln -svf ~/projects/dotfiles/.gitconfig ~
 
 ```
