@@ -3,3 +3,5 @@
 	name = slonka
 [init]
     defaultBranch = main
+[pull]
+	ff = only
