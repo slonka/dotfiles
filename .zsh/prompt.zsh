@@ -1,8 +1,8 @@
 # customize prompt
 
-# source "$(brew --prefix)/opt/kube-ps1/share/kube-ps1.sh"
+source "$(brew --prefix)/opt/kube-ps1/share/kube-ps1.sh"
 
-# KUBE_PROMPT='$(kube_ps1)'
+KUBE_PROMPT='$(kube_ps1)'
 # AWS_PROMPT='aws:$AWS_PROFILE'
 
 PS1="
@@ -16,6 +16,7 @@ ${hg_info}\
 ${git_info}\
 ${svn_info}\
 ${venv_info}\
+$KUBE_PROMPT \
 [%*] $exit_code
 %{$terminfo[bold]$fg[red]%}$ %{$reset_color%}"
 

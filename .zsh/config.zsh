@@ -20,8 +20,6 @@ autoload -Uz compinit && compinit -i
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 
-setopt HIST_IGNORE_ALL_DUPS
-
 export KEYTIMEOUT=1
 export GROOVY_HOME=/usr/local/opt/groovysdk/libexec
 export GOBIN=$HOME/go/bin
@@ -33,7 +31,8 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 export LANG="pl_PL.UTF-8"
 
-
 export HISTSIZE=1000000000
 export SAVEHIST=$HISTSIZE
 setopt EXTENDED_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt INC_APPEND_HISTORY

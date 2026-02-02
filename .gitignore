@@ -14,6 +14,7 @@
 .gitconfig.local
 
 # Folder view configuration files
+**/.DS_Store
 .DS_Store
 Desktop.ini
 
@@ -36,3 +37,5 @@ fish/fish_history
 # random
 shilocation
 nohup.out
+
+.idea/

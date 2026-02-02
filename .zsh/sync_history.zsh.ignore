@@ -1,0 +1,12 @@
+function bash_to_zsh() {
+    perl -pe 's/#(\d+)\n/: $1:0;/mg;$| = 1;'
+}
+
+function zsh_to_bash {
+    perl -pe 's/: (\d+):0;(.*)/#$1\n$2;/g;$| = 1;'
+}
+
+# if nothing is listening
+if ! lsof -i :9999; then 
+    tail -f -n 1 ~/.zsh_history | perl -pe 's/: (\d+):0;(.*)/#$1\n$2/g;$| = 1;' | while true; do netcat -l -p 9999 && sleep 10; done &>>/tmp/commands &
+fi

@@ -4,7 +4,6 @@ function docker_ips(){
 	docker ps -q | xargs -n 1 docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}} {{ .Config.Hostname }} {{ .Config.Image }}' | sed 's/ \// /'
 }
 
-
 function git_diff_lines(){
 	git diff $1 | gawk '
 	BEGIN {
@@ -39,7 +38,7 @@ function remove_changed_lines(){
 	while true; do
 		matches=$(git_diff_lines --staged | grep -E '^\+[^+]' | grep "$1" | head -n 1)
 		echo "matches: $matches"
-		
+
 		if [[ -z $matches ]]; then
 			break
 		fi

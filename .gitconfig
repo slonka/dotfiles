@@ -1,7 +1,16 @@
 [user]
 	email = slonka@users.noreply.github.com
 	name = slonka
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAExcjWXl3o+NPZlrJWf3GA9mCDCQfPcqtfwar3QUyHY
 [init]
     defaultBranch = main
 [pull]
 	ff = only
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/

@@ -2,7 +2,8 @@ set -o vi
 
 source "$SSHHOME/.sshrc.d/colors.bash"
 source "$SSHHOME/.sshrc.d/prompt.bash"
-#source "$SSHHOME/.sshrc.d/cpu_mem.bash"
+# source "$SSHHOME/.sshrc.d/cpu_mem.bash"
+# source "$SSHHOME/.sshrc.d/sync_history.bash"
 
 export PS1="${CYAN}\u${RESET} @ ${GREEN}\`hostname -f\`${RESET} in ${BOLD}${LIGHT_YELLOW}\w${RESET}\`parse_git_branch\`${RESET} [\t]\n${LIGHT_RED}\\$ ${RESET}"
 

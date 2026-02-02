@@ -9,3 +9,4 @@ alias tidy-html='tidy -utf8 -i -w 80 -c -q -asxhtml'
 alias find-last-modified='find . -type f -printf '"'"'%TY-%Tm-%Td %TT %p\n'"'"' | sort -r | head -n 20'
 alias rsynccopy="rsync --partial --progress --append --rsh=ssh -r -h "
 alias rsyncmove="rsync --partial --progress --append --rsh=ssh -r -h --remove-sent-files"
+alias kol="bash $HOME/projects/konnect-on-call-tool-kit/cli/kolsch.sh"
