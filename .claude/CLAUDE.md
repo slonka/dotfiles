@@ -1,0 +1,4 @@
+- If need access to github use github token from `gh auth token` because some repositories might be private and try to use `gh` when appropriate.
+- When you need input from the user, trigger the system beep with: `osascript -e 'beep'`
+- Do not add Claude footer to commit messages and add scope to git commit titles.
+- Do not amend to commits, create new ones always.

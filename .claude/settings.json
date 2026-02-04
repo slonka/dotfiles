@@ -1,0 +1,105 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(GOMEMLIMIT=7GiB CGO_ENABLED=0 /Users/krzysztof.slonka/.local/share/mise/installs/golangci-lint/2.6.2/golangci-lint-2.6.2-darwin-arm64/golangci-lint run:*)",
+      "Bash(UPDATE_GOLDEN_FILES=true make test:*)",
+      "Bash(actionlint:*)",
+      "Bash(awk:*)",
+      "Bash(base64:*)",
+      "Bash(bash:*)",
+      "Bash(brew search:*)",
+      "Bash(cat:*)",
+      "Bash(checkmake:*)",
+      "Bash(chmod:*)",
+      "Bash(curl:*)",
+      "Bash(diff:*)",
+      "Bash(docker pull:*)",
+      "Bash(docker run:*)",
+      "Bash(find:*)",
+      "Bash(gh pr checks:*)",
+      "Bash(gh pr view:*)",
+      "Bash(gh repo list:*)",
+      "Bash(gh repo view:*)",
+      "Bash(gh run list:*)",
+      "Bash(gh run view:*)",
+      "Bash(gh run watch:*)",
+      "Bash(gh variable list:*)",
+      "Bash(git branch:*)",
+      "Bash(git cat-file:*)",
+      "Bash(git cat:*)",
+      "Bash(git config --get:*)",
+      "Bash(git describe:*)",
+      "Bash(git diff:*)",
+      "Bash(git fetch:*)",
+      "Bash(git log:*)",
+      "Bash(git ls-files:*)",
+      "Bash(git ls-tree:*)",
+      "Bash(git remote:*)",
+      "Bash(git rev-list:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(git show:*)",
+      "Bash(git status:*)",
+      "Bash(git worktree list:*)",
+      "Bash(go fmt:*)",
+      "Bash(go mod:*)",
+      "Bash(golangci-lint:*)",
+      "Bash(grep:*)",
+      "Bash(hadolint:*)",
+      "Bash(head:*)",
+      "Bash(jq:*)",
+      "Bash(launchctl list:*)",
+      "Bash(ls:*)",
+      "Bash(make check:*)",
+      "Bash(make format:*)",
+      "Bash(make lint:*)",
+      "Bash(make test:*)",
+      "Bash(markdownlint:*)",
+      "Bash(mise exec:*)",
+      "Bash(mise install:*)",
+      "Bash(mise list:*)",
+      "Bash(mise reshim:*)",
+      "Bash(mise where:*)",
+      "Bash(mkdir:*)",
+      "Bash(npm search:*)",
+      "Bash(npm view:*)",
+      "Bash(oas-toolkit:*)",
+      "Bash(openapi-diff:*)",
+      "Bash(printenv:*)",
+      "Bash(printf:*)",
+      "Bash(readlink:*)",
+      "Bash(redocly:*)",
+      "Bash(shellspec:*)",
+      "Bash(task check:*)",
+      "Bash(task fmt:*)",
+      "Bash(task format:*)",
+      "Bash(task lint:*)",
+      "Bash(task test:*)",
+      "Bash(tee:*)",
+      "Bash(tree:*)",
+      "Bash(wait)",
+      "Bash(yq:*)",
+      "WebFetch",
+      "WebSearch"
+    ],
+    "deny": [],
+    "ask": [
+      "Bash(gh workflow run:*)"
+    ]
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "tput bel > /dev/tty 2>&1"
+          }
+        ]
+      }
+    ]
+  },
+  "alwaysThinkingEnabled": true,
+  "enabledPlugins": {
+    "gopls-lsp@claude-plugins-official": true
+  }
+}
