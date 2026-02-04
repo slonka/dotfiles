@@ -25,23 +25,26 @@ payload=$(cat)
 tool_name=$(echo "$payload" | jq -r '.tool_name // "Unknown"')
 tool_input=$(echo "$payload" | jq -r '.tool_input // empty')
 
+# Shorten a path to its last 2 components (e.g., .claude/permission-dialog.sh)
+short_path() { echo "$1" | awk -F/ '{if(NF>2) print $(NF-1)"/"$NF; else print $0}'; }
+
 # Build a human-readable subtitle
 case "$tool_name" in
   Bash)
-    command_preview=$(echo "$tool_input" | jq -r '.command // empty' | head -c 120)
+    command_preview=$(echo "$tool_input" | jq -r '.command // empty' | head -c 60)
     detail="Bash: ${command_preview}"
     ;;
   Edit)
     file=$(echo "$tool_input" | jq -r '.file_path // empty')
-    detail="Edit: ${file}"
+    detail="Edit: $(short_path "$file")"
     ;;
   Write)
     file=$(echo "$tool_input" | jq -r '.file_path // empty')
-    detail="Write: ${file}"
+    detail="Write: $(short_path "$file")"
     ;;
   NotebookEdit)
     file=$(echo "$tool_input" | jq -r '.notebook_path // empty')
-    detail="NotebookEdit: ${file}"
+    detail="NotebookEdit: $(short_path "$file")"
     ;;
   *)
     detail="${tool_name}"
