@@ -25,33 +25,33 @@ payload=$(cat)
 tool_name=$(echo "$payload" | jq -r '.tool_name // "Unknown"')
 tool_input=$(echo "$payload" | jq -r '.tool_input // empty')
 
-# Shorten a path to its last 2 components (e.g., .claude/permission-dialog.sh)
-short_path() { echo "$1" | awk -F/ '{if(NF>2) print $(NF-1)"/"$NF; else print $0}'; }
+# Truncate text to fit notification width
+truncate() { echo "$1" | head -c 60; }
 
-# Build a human-readable subtitle
+# Build a human-readable detail string
 case "$tool_name" in
   Bash)
-    command_preview=$(echo "$tool_input" | jq -r '.command // empty' | head -c 60)
-    detail="Bash: ${command_preview}"
+    command_preview=$(echo "$tool_input" | jq -r '.command // empty')
+    detail="Bash: $(truncate "$command_preview")"
     ;;
   Edit)
     file=$(echo "$tool_input" | jq -r '.file_path // empty')
-    detail="Edit: $(short_path "$file")"
+    detail="Edit: $(truncate "$file")"
     ;;
   Write)
     file=$(echo "$tool_input" | jq -r '.file_path // empty')
-    detail="Write: $(short_path "$file")"
+    detail="Write: $(truncate "$file")"
     ;;
   NotebookEdit)
     file=$(echo "$tool_input" | jq -r '.notebook_path // empty')
-    detail="NotebookEdit: $(short_path "$file")"
+    detail="NotebookEdit: $(truncate "$file")"
     ;;
   *)
     detail="${tool_name}"
     ;;
 esac
 
-# Tmux pane focusing logic (reused from notify.sh)
+# Tmux pane focusing logic for body click
 activate_args=()
 subtitle=""
 if [ -n "$TMUX" ]; then
@@ -65,7 +65,7 @@ if [ -n "$TMUX" ]; then
   activate_args=(-execute "$activate_cmd")
 fi
 
-# Show blocking notification with Allow/Deny buttons (120s timeout)
+# Show notification with Allow/Deny dropdown (120s timeout)
 response=$(claude-notifier \
   -title "Claude Code" \
   ${subtitle:+-subtitle "$subtitle"} \
