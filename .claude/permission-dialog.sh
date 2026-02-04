@@ -7,6 +7,20 @@ if ! command -v claude-notifier &>/dev/null; then
   exit 1
 fi
 
+# Skip notification if user is already focused on this pane
+frontmost=$(osascript -e 'tell application "System Events" to get name of first application process whose frontmost is true' 2>/dev/null)
+if [ "$frontmost" = "ghostty" ]; then
+  if [ -n "$TMUX" ]; then
+    pane_active=$(tmux display-message -p '#{pane_active}')
+    window_active=$(tmux display-message -p '#{window_active}')
+    if [ "$pane_active" = "1" ] && [ "$window_active" = "1" ]; then
+      exit 1
+    fi
+  else
+    exit 1
+  fi
+fi
+
 payload=$(cat)
 tool_name=$(echo "$payload" | jq -r '.tool_name // "Unknown"')
 tool_input=$(echo "$payload" | jq -r '.tool_input // empty')

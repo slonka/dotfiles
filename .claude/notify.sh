@@ -1,4 +1,19 @@
 #!/bin/bash
+
+# Skip notification if user is already focused on this pane
+frontmost=$(osascript -e 'tell application "System Events" to get name of first application process whose frontmost is true' 2>/dev/null)
+if [ "$frontmost" = "ghostty" ]; then
+  if [ -n "$TMUX" ]; then
+    pane_active=$(tmux display-message -p '#{pane_active}')
+    window_active=$(tmux display-message -p '#{window_active}')
+    if [ "$pane_active" = "1" ] && [ "$window_active" = "1" ]; then
+      exit 0
+    fi
+  else
+    exit 0
+  fi
+fi
+
 payload=$(cat)
 type=$(echo "$payload" | jq -r '.type // "notification"')
 
