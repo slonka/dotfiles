@@ -92,7 +92,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "tput bel > /dev/tty 2>&1"
+            "command": "bash ~/.claude/notify.sh"
           }
         ]
       }

@@ -16,5 +16,6 @@ ln -svf ~/projects/dotfiles/.hammerspoon ~
 ln -svf ~/projects/dotfiles/.config/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
 ln -svf ~/projects/dotfiles/.claude/CLAUDE.md ~/.claude/CLAUDE.md
 ln -svf ~/projects/dotfiles/.claude/settings.json ~/.claude/settings.json
+ln -svf ~/projects/dotfiles/.claude/notify.sh ~/.claude/notify.sh
 
 ```
