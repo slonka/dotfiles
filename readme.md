@@ -13,5 +13,6 @@ ln -svf ~/projects/dotfiles/.sshrc.d ~
 ln -svf ~/projects/dotfiles/.gitconfig ~
 ln -svf ~/projects/dotfiles/.gitconfig ~
 ln -svf ~/projects/dotfiles/.hammerspoon ~
+ln -svf ~/projects/dotfiles/.config/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
 
 ```
