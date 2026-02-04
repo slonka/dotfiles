@@ -89,10 +89,22 @@
   "hooks": {
     "Notification": [
       {
+        "matcher": "idle_prompt|auth_success|elicitation_dialog",
         "hooks": [
           {
             "type": "command",
             "command": "bash ~/.claude/notify.sh"
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/permission-dialog.sh",
+            "timeout": 180000
           }
         ]
       }

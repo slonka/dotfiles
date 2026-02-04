@@ -3,9 +3,8 @@ payload=$(cat)
 type=$(echo "$payload" | jq -r '.type // "notification"')
 
 case "$type" in
-  permission_prompt) message="Needs permission to continue" ;;
-  idle_prompt)       message="Waiting for your input" ;;
-  *)                 message="Needs your attention" ;;
+  idle_prompt) message="Waiting for your input" ;;
+  *)           message="Needs your attention" ;;
 esac
 
 subtitle=""

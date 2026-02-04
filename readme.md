@@ -1,3 +1,9 @@
+## Prerequisites
+
+```
+brew tap kusumotoa/tap && brew install --cask claude-notifier
+```
+
 ## Install
 
 ```
@@ -17,5 +23,6 @@ ln -svf ~/projects/dotfiles/.config/ghostty/config ~/Library/Application\ Suppor
 ln -svf ~/projects/dotfiles/.claude/CLAUDE.md ~/.claude/CLAUDE.md
 ln -svf ~/projects/dotfiles/.claude/settings.json ~/.claude/settings.json
 ln -svf ~/projects/dotfiles/.claude/notify.sh ~/.claude/notify.sh
+ln -svf ~/projects/dotfiles/.claude/permission-dialog.sh ~/.claude/permission-dialog.sh
 
 ```
