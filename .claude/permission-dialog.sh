@@ -70,7 +70,7 @@ response=$(claude-notifier \
   -title "Claude Code" \
   ${subtitle:+-subtitle "$subtitle"} \
   -message "$detail" \
-  -actions "Allow,Deny" \
+  -actions "Allow,Allow Always,Deny" \
   -timeout 120 \
   "${activate_args[@]}" \
   -sound default \
@@ -79,6 +79,10 @@ response=$(claude-notifier \
 case "$response" in
   Allow)
     echo '{"hookSpecificOutput":{"hookEventName":"PermissionRequest","decision":{"behavior":"allow"}}}'
+    exit 0
+    ;;
+  "Allow Always")
+    echo '{"hookSpecificOutput":{"hookEventName":"PermissionRequest","decision":{"behavior":"allowAlways"}}}'
     exit 0
     ;;
   Deny)

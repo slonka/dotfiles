@@ -22,8 +22,8 @@ case "$type" in
   *)           message="Needs your attention" ;;
 esac
 
+activate_args=()
 subtitle=""
-activate=(-activate com.mitchellh.ghostty)
 if [ -n "$TMUX" ]; then
   tmux_session=$(tmux display-message -p '#S')
   tmux_window=$(tmux display-message -p '#I')
@@ -31,13 +31,25 @@ if [ -n "$TMUX" ]; then
   tmux_client=$(tmux display-message -p '#{client_name}')
   subtitle=$(tmux display-message -p '#S:#I.#P #{window_name}')
   tmux=/opt/homebrew/bin/tmux
-  activate=(-execute "${tmux} select-window -t '${tmux_session}:${tmux_window}'; ${tmux} select-pane -t '${tmux_session}:${tmux_window}.${tmux_pane}'; ${tmux} switch-client -c '${tmux_client}' -t '${tmux_session}:${tmux_window}'; open -a Ghostty")
+  activate_cmd="${tmux} select-window -t '${tmux_session}:${tmux_window}'; ${tmux} select-pane -t '${tmux_session}:${tmux_window}.${tmux_pane}'; ${tmux} switch-client -c '${tmux_client}' -t '${tmux_session}:${tmux_window}'; open -a Ghostty"
+  activate_args=(-execute "$activate_cmd")
 fi
 
-terminal-notifier \
-  -title "Claude Code" \
-  ${subtitle:+-subtitle "$subtitle"} \
-  -message "$message" \
-  "${activate[@]}" \
-  -sound default \
-  -group "claude-code-$$"
+if command -v claude-notifier &>/dev/null; then
+  claude-notifier \
+    -title "Claude Code" \
+    ${subtitle:+-subtitle "$subtitle"} \
+    -message "$message" \
+    -timeout 30 \
+    "${activate_args[@]}" \
+    -sound default \
+    -group "claude-code-$$"
+else
+  terminal-notifier \
+    -title "Claude Code" \
+    ${subtitle:+-subtitle "$subtitle"} \
+    -message "$message" \
+    ${activate_args:+"${activate_args[@]}"} \
+    -sound default \
+    -group "claude-code-$$"
+fi
