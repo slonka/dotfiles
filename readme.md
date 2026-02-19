@@ -25,5 +25,6 @@ ln -svf ~/projects/dotfiles/.claude/settings.json ~/.claude/settings.json
 ln -svf ~/projects/dotfiles/.claude/notify.sh ~/.claude/notify.sh
 ln -svf ~/projects/dotfiles/.claude/permission-dialog.sh ~/.claude/permission-dialog.sh
 ln -svf ~/projects/dotfiles/.claude/statusline-command.sh ~/.claude/statusline-command.sh
+ln -svf ~/projects/dotfiles/.config/openwhisper-cleanup/replacements.json ~/.config/openwhisper-cleanup/replacements.json
 
 ```

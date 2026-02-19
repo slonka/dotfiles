@@ -1,0 +1,29 @@
+[
+  {"from": "open whisper", "to": "OpenWhispr"},
+  {"from": "open AI", "to": "OpenAI"},
+  {"from": "chat GPT", "to": "ChatGPT"},
+  {"from": "tik tok", "to": "TikTok"},
+  {"from": "you tube", "to": "YouTube"},
+  {"from": "linked in", "to": "LinkedIn"},
+
+  {"from": "git hub", "to": "GitHub", "lang": "en"},
+  {"from": "java script", "to": "JavaScript", "lang": "en"},
+  {"from": "type script", "to": "TypeScript", "lang": "en"},
+  {"from": "terra form", "to": "Terraform", "lang": "en"},
+  {"from": "engine x", "to": "NGINX", "lang": "en"},
+  {"from": "post gress", "to": "Postgres", "lang": "en"},
+  {"from": "my sequel", "to": "MySQL", "lang": "en"},
+  {"from": "chat GDP", "to": "ChatGPT", "lang": "en"},
+  {"from": "kubernetis", "to": "Kubernetes", "lang": "en"},
+  {"from": "per say", "to": "per se", "lang": "en"},
+  {"from": "sneak peak", "to": "sneak peek", "lang": "en"},
+  {"from": "mute point", "to": "moot point", "lang": "en"},
+  {"from": "bare with me", "to": "bear with me", "lang": "en"},
+  {"from": "on route", "to": "en route", "lang": "en"},
+  {"from": "deep seeded", "to": "deep-seated", "lang": "en"},
+  {"from": "free reign", "to": "free rein", "lang": "en"},
+
+  {"from": "czat GPT", "to": "ChatGPT", "lang": "pl"},
+  {"from": "wziąść", "to": "wziąć", "lang": "pl"},
+  {"from": "poszłem", "to": "poszedłem", "lang": "pl"}
+]
