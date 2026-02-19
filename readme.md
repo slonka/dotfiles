@@ -17,7 +17,7 @@ ln -svf ~/projects/dotfiles/.bash ~
 ln -svf ~/projects/dotfiles/.sshrc ~
 ln -svf ~/projects/dotfiles/.sshrc.d ~
 ln -svf ~/projects/dotfiles/.gitconfig ~
-ln -svf ~/projects/dotfiles/.gitconfig ~
+ln -svf ~/projects/dotfiles/.gitignore_global ~
 ln -svf ~/projects/dotfiles/.hammerspoon ~
 ln -svf ~/projects/dotfiles/.config/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
 ln -svf ~/projects/dotfiles/.claude/CLAUDE.md ~/.claude/CLAUDE.md

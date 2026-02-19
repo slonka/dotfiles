@@ -2,6 +2,8 @@
 	email = slonka@users.noreply.github.com
 	name = slonka
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAExcjWXl3o+NPZlrJWf3GA9mCDCQfPcqtfwar3QUyHY
+[core]
+	excludesfile = ~/.gitignore_global
 [init]
     defaultBranch = main
 [pull]
