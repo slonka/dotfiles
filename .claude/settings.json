@@ -96,7 +96,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "~/.local/bin/klaudiush --hook-type PreToolUse",
+            "command": "klaudiush --hook-type PreToolUse",
             "timeout": 30
           }
         ]
