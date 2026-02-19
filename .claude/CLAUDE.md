@@ -1,5 +1,5 @@
 - Use "-" instead of "—".
 - Nothing should ever be changed (POST, PATCH, DELETE, not only HTTP but others as well) outside of this machine when in plan mode.
 - If need access to github use `gh`.
-- Development in repos with multiple contributors must happen in a git worktree. Create new worktrees under `.trees/<branch>` from the git root. Come up with really short branch name based on my input and/or issue linked.
+- Development in repos with multiple contributors or when multiple claude processes are running in the same project must happen in a git worktree. Create new worktrees under `.trees/<branch>` from the git root. Come up with really short branch name based on my input and/or issue linked.
 - Do not amend to commits, create new ones when asked to, never push yourself
