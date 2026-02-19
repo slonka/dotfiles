@@ -87,6 +87,7 @@
     ]
   },
   "hooks": {
+    "PreToolUse": [],
     "Notification": [
       {
         "matcher": "idle_prompt|auth_success|elicitation_dialog",
@@ -110,8 +111,8 @@
       }
     ]
   },
-  "alwaysThinkingEnabled": true,
   "enabledPlugins": {
     "gopls-lsp@claude-plugins-official": true
-  }
+  },
+  "alwaysThinkingEnabled": true
 }

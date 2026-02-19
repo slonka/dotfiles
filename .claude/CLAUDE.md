@@ -1,4 +1,4 @@
-- If need access to github use github token from `gh auth token` because some repositories might be private and try to use `gh` when appropriate.
-- When you need input from the user, trigger the system beep with: `osascript -e 'beep'`
-- Do not add Claude footer to commit messages and add scope to git commit titles.
-- Do not amend to commits, create new ones always.
+- Nothing should ever be changed (POST, PATCH, DELETE, not only HTTP but others as well) outside of this machine when in plan mode.
+- If need access to github use `gh`.
+- Development in repos with multiple contributors must happen in a git worktree. Create new worktrees under `.trees/<branch>` from the git root. Come up with really short branch name based on my input and/or issue linked.
+- Do not amend to commits, create new ones when asked to, never push yourself
