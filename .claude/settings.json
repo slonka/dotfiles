@@ -1,7 +1,7 @@
 {
+  "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [
-      "Bash(GOMEMLIMIT=7GiB CGO_ENABLED=0 /Users/krzysztof.slonka/.local/share/mise/installs/golangci-lint/2.6.2/golangci-lint-2.6.2-darwin-arm64/golangci-lint run:*)",
       "Bash(UPDATE_GOLDEN_FILES=true make test:*)",
       "Bash(actionlint:*)",
       "Bash(awk:*)",
@@ -83,11 +83,23 @@
     ],
     "deny": [],
     "ask": [
+      "Bash(git commit:*)",
       "Bash(gh workflow run:*)"
     ]
   },
   "hooks": {
-    "PreToolUse": [],
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.local/bin/klaudiush --hook-type PreToolUse",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
     "Notification": [
       {
         "matcher": "idle_prompt|auth_success|elicitation_dialog",
@@ -111,8 +123,14 @@
       }
     ]
   },
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline-command.sh"
+  },
   "enabledPlugins": {
-    "gopls-lsp@claude-plugins-official": true
+    "gopls-lsp@claude-plugins-official": true,
+    "gh-review-comments@sai": true,
+    "humanize@sai": true
   },
   "alwaysThinkingEnabled": true
 }

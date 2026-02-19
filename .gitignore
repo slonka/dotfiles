@@ -39,3 +39,6 @@ shilocation
 nohup.out
 
 .idea/
+
+# claude skills (work-specific)
+.claude/skills/
