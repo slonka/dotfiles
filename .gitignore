@@ -40,5 +40,6 @@ nohup.out
 
 .idea/
 
-# claude skills (work-specific)
+# claude local/work-specific
+.claude/settings.local.json
 .claude/skills/
