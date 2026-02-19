@@ -84,6 +84,8 @@
     "deny": [],
     "ask": [
       "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(gh auth token:*)",
       "Bash(gh workflow run:*)"
     ]
   },
