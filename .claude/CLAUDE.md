@@ -3,3 +3,4 @@
 - If need access to github use `gh`.
 - Development in repos with multiple contributors or when multiple claude processes are running in the same project must happen in a git worktree. Create new worktrees under `.trees/<branch>` from the git root. Come up with really short branch name based on my input and/or issue linked.
 - Do not amend to commits, use "-sS" flags, create new ones when asked to, never push yourself
+- To type formatted text into Slack, use `~/bin/slack-type "mrkdwn text"` or `slack-type -f file.txt`. Slack only renders mrkdwn formatting when typed, not pasted. Default 3s delay before typing (`-d` to change). User must focus the Slack input field during the delay.
