@@ -1,0 +1,55 @@
+#!/bin/bash
+# Simulates typing into Slack using osascript, character by character
+# Slack interprets mrkdwn formatting when typed, but not when pasted
+# Usage: slack-type "your *bold* and _italic_ text"
+#        slack-type -f file.txt
+#        echo "text" | slack-type
+# Options:
+#   -d SECONDS  delay before typing (default: 3)
+#   -f FILE     read text from file
+
+DELAY=3
+TEXT=""
+
+while getopts "d:f:" opt; do
+    case $opt in
+        d) DELAY="$OPTARG" ;;
+        f) TEXT=$(cat "$OPTARG") ;;
+        *) echo "Usage: slack-type [-d delay] [-f file] [text]" >&2; exit 1 ;;
+    esac
+done
+shift $((OPTIND - 1))
+
+if [ -z "$TEXT" ] && [ $# -gt 0 ]; then
+    TEXT="$*"
+elif [ -z "$TEXT" ]; then
+    TEXT=$(cat)
+fi
+
+if [ -z "$TEXT" ]; then
+    echo "No text provided" >&2
+    exit 1
+fi
+
+echo "You have ${DELAY} seconds to focus the Slack message input..."
+sleep "$DELAY"
+echo "Typing..."
+
+osascript - "$TEXT" <<'APPLESCRIPT'
+on run argv
+    set theText to item 1 of argv
+    tell application "System Events"
+        repeat with i from 1 to count of theText
+            set c to character i of theText
+            if c is ASCII character 10 then
+                key code 36 using {shift down}
+            else
+                keystroke c
+            end if
+            delay 0.03
+        end repeat
+    end tell
+end run
+APPLESCRIPT
+
+echo "Done!"

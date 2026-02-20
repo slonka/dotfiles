@@ -28,6 +28,9 @@ links=(
   ~/.claude/statusline-command.sh  "$D/.claude/statusline-command.sh"
   ~/.claude/skills/madr-review     "$D/.claude/skills/madr-review"
 
+  # scripts
+  ~/bin/slack-type  "$D/bin/slack-type"
+
   # openwhisper-cleanup
   ~/.config/openwhisper-cleanup/replacements.json  "$D/.config/openwhisper-cleanup/replacements.json"
 )
