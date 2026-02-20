@@ -1,4 +1,4 @@
-[
+{"rules": [
   {"from": "open whisper", "to": "OpenWhispr"},
   {"from": "open AI", "to": "OpenAI"},
   {"from": "chat GPT", "to": "ChatGPT"},
@@ -25,5 +25,44 @@
 
   {"from": "czat GPT", "to": "ChatGPT", "lang": "pl"},
   {"from": "wziąść", "to": "wziąć", "lang": "pl"},
-  {"from": "poszłem", "to": "poszedłem", "lang": "pl"}
-]
+  {"from": "poszłem", "to": "poszedłem", "lang": "pl"},
+
+  {"from": "mongo DB", "to": "MongoDB"},
+  {"from": "graph QL", "to": "GraphQL"},
+  {"from": "dev ops", "to": "DevOps"},
+  {"from": "cloud flare", "to": "Cloudflare"},
+  {"from": "fire base", "to": "Firebase"},
+  {"from": "elastic search", "to": "Elasticsearch"},
+  {"from": "co pilot", "to": "Copilot"},
+  {"from": "code pilot", "to": "Copilot"},
+  {"from": "micro soft", "to": "Microsoft"},
+  {"from": "mac OS", "to": "macOS"},
+  {"from": "git lab", "to": "GitLab"},
+  {"from": "bit bucket", "to": "Bitbucket"},
+  {"from": "web pack", "to": "webpack"},
+  {"from": "web socket", "to": "WebSocket"},
+  {"from": "web sockets", "to": "WebSockets"},
+  {"from": "node JS", "to": "Node.js"},
+  {"from": "next JS", "to": "Next.js"},
+  {"from": "fast API", "to": "FastAPI"},
+  {"from": "Maria DB", "to": "MariaDB"},
+  {"from": "dynamo DB", "to": "DynamoDB"},
+  {"from": "post gres SQL", "to": "PostgreSQL"},
+  {"from": "post gress SQL", "to": "PostgreSQL"},
+  {"from": "x code", "to": "Xcode"},
+  {"from": "spring boot", "to": "Spring Boot"},
+  {"from": "vue JS", "to": "Vue.js"},
+  {"from": "reddis", "to": "Redis"},
+  {"from": "rabit MQ", "to": "RabbitMQ"},
+  {"from": "rabbit MQ", "to": "RabbitMQ"},
+  {"from": "post man", "to": "Postman"},
+  {"from": "source tree", "to": "Sourcetree"},
+  {"from": "data dog", "to": "Datadog"},
+  {"from": "pager duty", "to": "PagerDuty"},
+  {"from": "circle CI", "to": "CircleCI"},
+  {"from": "click house", "to": "ClickHouse"},
+  {"from": "supper base", "to": "Supabase"},
+  {"from": "supra base", "to": "Supabase"},
+  {"from": "ver cell", "to": "Vercel"},
+  {"from": "log stash", "to": "Logstash"}
+]}
