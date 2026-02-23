@@ -1,6 +1,11 @@
 #!/bin/bash
 
-# Skip notification if user is already focused on this pane
+# flag the tmux window as needing attention (cleared on focus by tmux hook)
+if [ -n "$TMUX_PANE" ]; then
+  tmux set -w -t "$TMUX_PANE" @alert 1
+fi
+
+# Skip macOS notification if user is already focused on this pane
 frontmost=$(osascript -e 'tell application "System Events" to get name of first application process whose frontmost is true' 2>/dev/null)
 if [ "$frontmost" = "ghostty" ]; then
   if [ -n "$TMUX" ]; then
