@@ -31,6 +31,12 @@ if [ -z "$TEXT" ]; then
     exit 1
 fi
 
+osascript -e "display dialog \"slack-type will start typing in ${DELAY} seconds after you click OK.\nFocus the Slack input field first!\" buttons {\"Cancel\", \"OK\"} default button \"OK\" with title \"slack-type\"" 2>/dev/null
+if [ $? -ne 0 ]; then
+    echo "Cancelled." >&2
+    exit 1
+fi
+
 echo "You have ${DELAY} seconds to focus the Slack message input..."
 sleep "$DELAY"
 echo "Typing..."
@@ -46,7 +52,7 @@ on run argv
             else
                 keystroke c
             end if
-            delay 0.03
+            delay 0.015
         end repeat
     end tell
 end run
