@@ -64,5 +64,6 @@
   {"from": "supper base", "to": "Supabase"},
   {"from": "supra base", "to": "Supabase"},
   {"from": "ver cell", "to": "Vercel"},
+  {"from": "bust", "to": "boost"},
   {"from": "log stash", "to": "Logstash"}
 ]}
