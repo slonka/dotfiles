@@ -65,5 +65,7 @@
   {"from": "supra base", "to": "Supabase"},
   {"from": "ver cell", "to": "Vercel"},
   {"from": "bust", "to": "boost"},
+  {"from": "razberepaj", "to": "raspberry pi"},
+  {"from": "Tmax", "to": "tmux"},
   {"from": "log stash", "to": "Logstash"}
 ]}
