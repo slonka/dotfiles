@@ -67,5 +67,7 @@
   {"from": "bust", "to": "boost"},
   {"from": "razberepaj", "to": "raspberry pi"},
   {"from": "Tmax", "to": "tmux"},
+  {"from": "issu'sów", "to": "issue-sów"},
+  {"from": "Eforcie", "to": "effort-cie"},
   {"from": "log stash", "to": "Logstash"}
 ]}
