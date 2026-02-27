@@ -13,6 +13,6 @@ export PS1="${LIGHT_BLUE}# ${CYAN}\u${RESET} @ ${GREEN}\`hostname -f\`${RESET} i
 source $HOME/.docker/init-bash.sh || true # Added by Docker Desktop
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="$HOME/.rd/bin:$PATH"
+export PATH="/Users/krzysztof.slonka/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 . "$HOME/.cargo/env"
