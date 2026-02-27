@@ -1,2 +1,5 @@
 # git worktrees
 .trees/
+
+# Claude Code
+.claude/
