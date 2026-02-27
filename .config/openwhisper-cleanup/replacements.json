@@ -68,6 +68,11 @@
   {"from": "razberepaj", "to": "raspberry pi"},
   {"from": "Tmax", "to": "tmux"},
   {"from": "issu'sów", "to": "issue-sów"},
+  {"from": "pijarze", "to": "PRrze"},
   {"from": "Eforcie", "to": "effort-cie"},
+  {"from": "kaszowaniem", "to": "cache-owaniem"},
+  {"from": "cloda", "to": "claude-a"},
+  {"from": "klod", "to": "claude"},
+  {"from": "meszem", "to": "mesh-em"},
   {"from": "log stash", "to": "Logstash"}
 ]}
