@@ -61,3 +61,4 @@ Clone to `~/projects/dotfiles` and run `install.sh` to create all symlinks.
 - Node/version-manager setup goes in `.zsh/node.zsh`
 - Claude Code hooks go in `.claude/hooks/`
 - When adding a new file or script to the repo, add a corresponding symlink entry in `install.sh`
+- This is a public repository - never commit secrets, API keys, tokens, passwords, or other sensitive data
