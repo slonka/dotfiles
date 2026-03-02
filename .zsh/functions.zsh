@@ -50,7 +50,7 @@ claude() {
 	model=$(printf "opus\nsonnet\nhaiku" | fzf --prompt="Model: " --height=~5 --reverse --no-info)
 	[[ -z "$model" ]] && return
 
-	print -z "claude --model $model --resume $session_id"
+	print -z "claude --model $model --resume $session_id --fork-session"
 }
 
 function remove_changed_lines(){
