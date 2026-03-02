@@ -73,6 +73,10 @@
   {"from": "kaszowaniem", "to": "cache-owaniem"},
   {"from": "cloda", "to": "claude-a"},
   {"from": "klod", "to": "claude"},
+  {"from": "klot", "to": "claude"},
+  {"from": "klodem", "to": "claude-em"},
+  {"from": "kopilot", "to": "copilot"},
+  {"from": "kopaję", "to": "copilot"},
   {"from": "meszem", "to": "mesh-em"},
   {"from": "log stash", "to": "Logstash"}
 ]}

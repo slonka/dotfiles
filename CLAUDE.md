@@ -4,11 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal dotfiles repository for macOS. Configs are symlinked from `~/projects/dotfiles/` to `~` — there is no install script, just manual `ln -svf` commands (see `readme.md`).
+Personal dotfiles repository for macOS.
+Configs are symlinked from `~/projects/dotfiles/` to `~` via `install.sh`.
 
 ## Setup
 
-Clone to `~/projects/dotfiles` and symlink each config file/directory to home. Full list in `readme.md`.
+Clone to `~/projects/dotfiles` and run `install.sh` to create all symlinks.
 
 ## Architecture
 
@@ -42,6 +43,14 @@ Clone to `~/projects/dotfiles` and symlink each config file/directory to home. F
 
 - `.hammerspoon/init.lua` — `Cmd+J` toggles/cycles Ghostty terminal windows
 
+### Claude Code
+
+- `.claude/settings.json` — global settings, hooks, and permissions
+- `.claude/hooks/` — hook scripts triggered by Claude Code lifecycle events (e.g. `save-bash-history.sh` appends Bash tool commands to zsh history)
+- `.claude/notify.sh` — notification hook (idle prompt, auth)
+- `.claude/permission-dialog.sh` — interactive Allow/Deny notification for permission requests
+- `.claude/statusline-command.sh` — status line rendering (model, tokens, cost, git info)
+
 ## Conventions
 
 - Shell modules are organized by concern (one file per topic in `.zsh/` and `.bash/`)
@@ -50,3 +59,5 @@ Clone to `~/projects/dotfiles` and symlink each config file/directory to home. F
 - New shell functions go in `.zsh/functions.zsh`
 - Kubernetes-related config goes in `.zsh/k8s.zsh`
 - Node/version-manager setup goes in `.zsh/node.zsh`
+- Claude Code hooks go in `.claude/hooks/`
+- When adding a new file or script to the repo, add a corresponding symlink entry in `install.sh`
