@@ -34,6 +34,25 @@ function git_diff_lines(){
 	'
 }
 
+claude() {
+	command claude "$@"
+
+	# Skip resume prompt for non-interactive modes
+	case " $* " in
+		*" -p "* | *" --print "*) return ;;
+	esac
+
+	local session_id
+	session_id=$(jq -r --arg pwd "$(pwd)" 'select(.project == $pwd) | .sessionId' ~/.claude/history.jsonl | tail -1)
+	[[ -z "$session_id" ]] && return
+
+	local model
+	model=$(printf "opus\nsonnet\nhaiku" | fzf --prompt="Model: " --height=~5 --reverse --no-info)
+	[[ -z "$model" ]] && return
+
+	print -z "claude --model $model --resume $session_id"
+}
+
 function remove_changed_lines(){
 	while true; do
 		matches=$(git_diff_lines --staged | grep -E '^\+[^+]' | grep "$1" | head -n 1)
