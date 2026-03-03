@@ -35,15 +35,16 @@ function git_diff_lines(){
 }
 
 claude() {
-	command claude "$@"
-
 	# Skip resume prompt for non-interactive modes
 	case " $* " in
-		*" -p "* | *" --print "*) return ;;
+		*" -p "* | *" --print "*) command claude "$@"; return ;;
 	esac
 
+	CLAUDE_SHELL_PID=$$ command claude "$@"
+
 	local session_id
-	session_id=$(jq -r --arg pwd "$(pwd)" 'select(.project == $pwd) | .sessionId' ~/.claude/history.jsonl | tail -1)
+	session_id=$(cat /tmp/claude-session-$$ 2>/dev/null)
+	rm -f /tmp/claude-session-$$
 	[[ -z "$session_id" ]] && return
 
 	local model
