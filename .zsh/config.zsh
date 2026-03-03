@@ -20,6 +20,7 @@ autoload -Uz compinit && compinit -i
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 
+export EDITOR=vim
 export KEYTIMEOUT=1
 export GROOVY_HOME=/usr/local/opt/groovysdk/libexec
 export GOBIN=$HOME/go/bin
