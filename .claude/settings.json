@@ -1,6 +1,7 @@
 {
   "includeCoAuthoredBy": false,
   "permissions": {
+    "additionalDirectories": ["/tmp/"],
     "allow": [
       "Bash(UPDATE_GOLDEN_FILES=true make test *)",
       "Bash(actionlint *)",
@@ -179,5 +180,6 @@
     "humanize@sai": true,
     "promptgen@sai": true
   },
-  "alwaysThinkingEnabled": true
+  "alwaysThinkingEnabled": true,
+  "voiceEnabled": false
 }
