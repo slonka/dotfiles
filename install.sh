@@ -28,6 +28,7 @@ links=(
   ~/.claude/statusline-command.sh  "$D/.claude/statusline-command.sh"
   ~/.claude/skills/madr-review     "$D/.claude/skills/madr-review"
   ~/.claude/hooks/save-bash-history.sh  "$D/.claude/hooks/save-bash-history.sh"
+  ~/.claude/hooks/save-session-id.sh    "$D/.claude/hooks/save-session-id.sh"
 
   # scripts
   ~/bin/slack-type  "$D/bin/slack-type"
