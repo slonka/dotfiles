@@ -53,6 +53,22 @@ claude() {
 	print -z "claude --model $model --resume $session_id --fork-session"
 }
 
+reload-all() {
+	local pane cmd pid
+	tmux list-panes -a -F '#{pane_id} #{pane_current_command} #{pane_pid}' | while read -r pane cmd pid; do
+		case "$cmd" in
+			zsh|bash|sh)
+				tmux send-keys -t "$pane" "source ~/.zshrc" Enter
+				;;
+			*)
+				if pgrep -P "$pid" -f claude > /dev/null 2>&1; then
+					tmux send-keys -t "$pane" "!source ~/.zshrc" Enter
+				fi
+				;;
+		esac
+	done
+}
+
 function remove_changed_lines(){
 	while true; do
 		matches=$(git_diff_lines --staged | grep -E '^\+[^+]' | grep "$1" | head -n 1)
