@@ -78,5 +78,8 @@
   {"from": "kopilot", "to": "copilot"},
   {"from": "kopaję", "to": "copilot"},
   {"from": "meszem", "to": "mesh-em"},
+  {"from": "piara", "to": "PR-a"},
+  {"from": "poka", "to": "PoC-a"},
+  {"from": "skarby", "to": "skarbie"},
   {"from": "log stash", "to": "Logstash"}
 ]}
