@@ -41,5 +41,6 @@ for ((i=0; i<${#links[@]}; i+=2)); do
   target="${links[i]}"
   source="${links[i+1]}"
   mkdir -p "$(dirname "$target")"
-  ln -svf "$source" "$target"
+  rm -rf "$target"
+  ln -sv "$source" "$target"
 done
