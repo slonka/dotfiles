@@ -6,6 +6,7 @@ D=~/projects/dotfiles
 # target -> source
 links=(
   ~/.zsh                        "$D/.zsh"
+  ~/.zshenv                      "$D/.zshenv"
   ~/.zshrc                      "$D/.zshrc"
   ~/.oh-my.zsh                  "$D/.oh-my.zsh"
   ~/.tmux.conf                  "$D/.tmux.conf"
