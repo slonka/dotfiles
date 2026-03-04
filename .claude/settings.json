@@ -1,7 +1,6 @@
 {
   "includeCoAuthoredBy": false,
   "permissions": {
-    "additionalDirectories": ["/tmp/"],
     "allow": [
       "Bash(UPDATE_GOLDEN_FILES=true make test *)",
       "Bash(actionlint *)",
@@ -133,6 +132,9 @@
       "Bash(npm install *)",
       "Bash(osascript *)",
       "Bash(python3 *)"
+    ],
+    "additionalDirectories": [
+      "/tmp/"
     ]
   },
   "hooks": {
@@ -203,5 +205,6 @@
     "promptgen@sai": true
   },
   "alwaysThinkingEnabled": true,
-  "voiceEnabled": false
+  "voiceEnabled": false,
+  "effortLevel": "high"
 }
