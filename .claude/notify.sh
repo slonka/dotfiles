@@ -40,21 +40,10 @@ if [ -n "$TMUX" ]; then
   activate_args=(-execute "$activate_cmd")
 fi
 
-if command -v claude-notifier &>/dev/null; then
-  claude-notifier \
-    -title "Claude Code" \
-    ${subtitle:+-subtitle "$subtitle"} \
-    -message "$message" \
-    -timeout 30 \
-    "${activate_args[@]}" \
-    -sound default \
-    -group "claude-code-$$"
-else
-  terminal-notifier \
-    -title "Claude Code" \
-    ${subtitle:+-subtitle "$subtitle"} \
-    -message "$message" \
-    ${activate_args:+"${activate_args[@]}"} \
-    -sound default \
-    -group "claude-code-$$"
-fi
+terminal-notifier \
+  -title "Claude Code" \
+  ${subtitle:+-subtitle "$subtitle"} \
+  -message "$message" \
+  ${activate_args:+"${activate_args[@]}"} \
+  -sound default \
+  -group "claude-code-$$"

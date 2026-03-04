@@ -18,7 +18,7 @@ export PATH=/opt/homebrew/opt/python@3.9/libexec/bin:$PATH
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/krzysztof.slonka/.rd/bin:$PATH"
+export PATH="$HOME/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 eval "$(mise activate zsh)"
 

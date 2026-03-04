@@ -1,7 +1,7 @@
 [user]
 	email = slonka@users.noreply.github.com
 	name = slonka
-	signingkey = /Users/slonka/.ssh/id_ed25519.pub
+	signingkey = ~/.ssh/id_ed25519.pub
 [core]
 	excludesfile = ~/.gitignore_global
 [init]
