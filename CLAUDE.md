@@ -51,6 +51,10 @@ Clone to `~/projects/dotfiles` and run `install.sh` to create all symlinks.
 - `.claude/permission-dialog.sh` — interactive Allow/Deny notification for permission requests
 - `.claude/statusline-command.sh` — status line rendering (model, tokens, cost, git info)
 
+## Preferred Languages
+
+Go, Node.js, TypeScript, Java, Kotlin, Rust.
+
 ## Conventions
 
 - Shell modules are organized by concern (one file per topic in `.zsh/` and `.bash/`)
