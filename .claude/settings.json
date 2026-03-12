@@ -100,6 +100,8 @@
       "Bash(oas-toolkit *)",
       "Bash(openapi-diff *)",
       "Bash(pbcopy *)",
+      "Bash(python3 /Users/slonka/projects/holder/gen_stl.py)",
+      "Bash(python3 /Users/slonka/projects/holder/analyze.py)",
       "Bash(printenv *)",
       "Bash(printf *)",
       "Bash(readlink *)",
@@ -205,6 +207,6 @@
     "promptgen@sai": true
   },
   "alwaysThinkingEnabled": true,
-  "voiceEnabled": false,
-  "effortLevel": "high"
+  "effortLevel": "high",
+  "voiceEnabled": false
 }
