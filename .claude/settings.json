@@ -206,7 +206,8 @@
     "gopls-lsp@claude-plugins-official": true,
     "gh-review-comments@sai": true,
     "humanize@sai": true,
-    "promptgen@sai": true
+    "promptgen@sai": true,
+    "swift-lsp@claude-plugins-official": true
   },
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
