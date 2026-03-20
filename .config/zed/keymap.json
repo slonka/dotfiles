@@ -1,0 +1,8 @@
+[
+  {
+    "bindings": {
+      "cmd-shift-p": "projects::OpenRecent",
+      "cmd-shift-a": "command_palette::Toggle"
+    }
+  }
+]

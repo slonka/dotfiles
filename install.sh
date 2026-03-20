@@ -31,6 +31,10 @@ links=(
   ~/.claude/hooks/save-bash-history.sh  "$D/.claude/hooks/save-bash-history.sh"
   ~/.claude/hooks/save-session-id.sh    "$D/.claude/hooks/save-session-id.sh"
 
+  # zed
+  ~/.config/zed/settings.json  "$D/.config/zed/settings.json"
+  ~/.config/zed/keymap.json    "$D/.config/zed/keymap.json"
+
   # scripts
   ~/bin/slack-type  "$D/bin/slack-type"
 
