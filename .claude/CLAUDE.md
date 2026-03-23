@@ -9,4 +9,5 @@
 - Every new sentence in markdown files should be on a separate line.
 - Keep Bash commands simple and avoid piping (e.g. `| tail`, `| head`, `| grep`) and `$()` subshells. Compound commands form a single permission string, so approving `gradle:*` won't match `./gradlew build | tail -10`. Run each command separately and use dedicated tools (Read with offset/limit, Grep) to inspect output. Store intermediate results in variables across separate Bash calls instead of inlining with `$()`.
 - Always use full URLs with `https://` prefix so they are clickable in the terminal.
+- When referencing PRs or issues, always provide the full URL (e.g. `https://github.com/org/repo/pull/123`) instead of just the number or ID.
 - Never use `cd <path> && git <command>` - use `git -C <path> <command>` instead to avoid bare repository attack warnings and compound command approvals.
