@@ -158,6 +158,8 @@
       "Bash(wait)",
       "Bash(wc *)",
       "Bash(yq *)",
+      "Bash(* > /tmp/*)",
+      "Bash(* >> /tmp/*)",
       "WebFetch",
       "WebSearch"
     ],
@@ -245,7 +247,8 @@
     "gh-review-comments@sai": true,
     "humanize@sai": true,
     "promptgen@sai": true,
-    "swift-lsp@claude-plugins-official": true
+    "swift-lsp@claude-plugins-official": true,
+    "ai-daily-digest@sai": true
   },
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
